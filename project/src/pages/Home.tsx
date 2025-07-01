@@ -1,4 +1,3 @@
-import React from 'react'
 import { Link } from 'react-router-dom'
 import { motion } from 'framer-motion'
 import { Brain, Heart, Shield, Users, ArrowRight, CheckCircle, Star } from 'lucide-react'

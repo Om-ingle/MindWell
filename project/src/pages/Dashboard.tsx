@@ -1,19 +1,17 @@
-import React, { useState } from 'react'
+import { useState } from 'react'
 import { motion } from 'framer-motion'
 import { 
   Calendar, 
   TrendingUp, 
   Brain, 
-  Heart, 
   Target, 
   Award,
   Plus,
-  BarChart3,
   Clock,
   Smile
 } from 'lucide-react'
 import { useAssessment } from '../context/AssessmentContext'
-import { LineChart, Line, XAxis, YAxis, CartesianGrid, Tooltip, ResponsiveContainer, AreaChart, Area } from 'recharts'
+import { LineChart, Line, XAxis, YAxis, CartesianGrid, Tooltip, ResponsiveContainer } from 'recharts'
 
 const Dashboard = () => {
   const { result } = useAssessment()
@@ -114,7 +112,7 @@ const Dashboard = () => {
           transition={{ duration: 0.6, delay: 0.1 }}
           className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 mb-8"
         >
-          {stats.map((stat, index) => (
+          {stats.map((stat) => (
             <div key={stat.title} className="card">
               <div className="flex items-center justify-between">
                 <div>

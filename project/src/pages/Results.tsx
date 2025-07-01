@@ -1,4 +1,3 @@
-import React from 'react'
 import { Link } from 'react-router-dom'
 import { motion } from 'framer-motion'
 import { 
@@ -8,9 +7,7 @@ import {
   TrendingUp, 
   AlertTriangle, 
   CheckCircle, 
-  ArrowRight,
-  Download,
-  Share2
+  ArrowRight
 } from 'lucide-react'
 import { useAssessment } from '../context/AssessmentContext'
 import { PieChart, Pie, Cell, BarChart, Bar, XAxis, YAxis, CartesianGrid, Tooltip, ResponsiveContainer } from 'recharts'
@@ -184,7 +181,7 @@ const Results = () => {
           transition={{ duration: 0.6, delay: 0.4 }}
           className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 mb-8"
         >
-          {Object.entries(result.categoryScores).map(([category, score], index) => {
+          {Object.entries(result.categoryScores).map(([category, score]) => {
             const getScoreColor = (score: number) => {
               if (score < 30) return 'text-success-600 bg-success-100'
               if (score < 60) return 'text-warning-600 bg-warning-100'
